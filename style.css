@@ -1,6 +1,10 @@
 :root {
   --white-color: #ffffff;
 }
+::selection { 
+  background-color: white;
+  color: #a021db;
+}
 
 * {
   margin: 0;
