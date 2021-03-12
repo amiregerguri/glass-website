@@ -43,6 +43,12 @@ input {
   border-radius: 100px;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #a021db;
 }
 
 .form-control {
@@ -125,4 +131,92 @@ input {
     margin-top: 40px;
     text-transform: uppercase;
 
+}
+
+
+/* Animation */
+
+.fade-in-left {
+  animation: fadeInLeft ease-in 1.5s;
+  animation-fill-mode: both;
+}
+
+.fade-in-right {
+  animation: fadeInRight ease-in 1.5s;
+}
+
+.fade-in-down{
+  animation: fadeInDown ease-in 1.5s;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 850px) { 
+  .auth-section { 
+    max-width: 600px;
+  }
+
+  .welcome-message {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 650px) { 
+  .auth-section { 
+    flex-wrap: wrap;
+    max-width: 75%;
+    height: auto;
+  }
+
+  .welcome-message {
+    height: auto;
+    max-width: 100%;
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) { 
+  .auth-section { 
+    max-width: 90%;
+  }
+  .welcome-message,
+  .form-wrapper {
+    padding: 24px;
+  }
+  .headline-title {
+    margin-bottom: 24px;
+  }
 }
